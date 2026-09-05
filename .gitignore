@@ -1,0 +1,7 @@
+
+# hardware-specific, not portable between machines
+hosts/desktop/hardware-configuration.nix
+hosts/laptop/hardware-configuration.nix
+
+# fish functions (all, including generated ones)
+config/fish/functions/
