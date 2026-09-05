@@ -1,0 +1,112 @@
+// ─────────────────────────────────────────────────────────────────────────────
+// 90 — Your personal overrides
+// ─────────────────────────────────────────────────────────────────────────────
+//
+// This file is YOURS. iNiR updates will never overwrite it.
+// Put any custom configuration here: extra binds, per-app window rules,
+// output configuration, named workspaces, etc.
+//
+// Since Niri evaluates config top-to-bottom, settings here take effect
+// after all other config.d files. For window-rule properties, all matching
+// rules accumulate. For scalar values (like gaps), the last one wins.
+//  
+// ─────────────────────────────────────────────────────────────────────────────
+
+window-rule {
+	match app-id="steam"
+	match app-id="discord"
+	match app-id="spotify"
+	match app-id="code"
+	match app-id="firefox"
+        match app-id=r"org\.gnome\..*"
+	match app-id="com.obsproject.Studio"
+	opacity 0.8
+	background-effect {
+		blur true
+		xray false
+	}
+}
+
+/-window-rule {
+	match app-id="firefox"
+	opacity 0.5
+	background-effect {
+		blur true
+		xray false
+	}
+}
+
+window-rule {
+	match app-id="kitty"
+	opacity 0.9
+	background-effect {
+		blur true
+		xray false
+	}
+}
+
+blur {
+        passes 2       
+        offset 3.0     
+        noise 0.02     
+        saturation 1.5 
+    }
+
+/-window-rule {
+    match app-id=r#"^org\.keepassxc\.KeePassXC$"#
+    match app-id=r#"^org\.gnome\.World\.Secrets$"#
+    match app-id=r#"^discord$"#
+    block-out-from "screencast"
+}
+
+
+binds {
+    Mod+M {
+        spawn "sh" "-c" "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle && if wpctl get-volume @DEFAULT_AUDIO_SOURCE@ | grep -q MUTED; then notify-send 'Microphone' '🔴 Muted'; else notify-send 'Microphone' '🟢 Unmuted'; fi"
+    }
+}
+
+
+layer-rule {
+    match namespace="^noctalia-"
+    background-effect {
+        xray false
+        blur false
+    }
+}
+
+layer-rule {
+    match namespace="^noctalia-bar-.*$"
+
+    background-effect {
+        blur false
+    }
+}
+
+
+window-rule {
+	match app-id="dev.noctalia.Noctalia"
+	background-effect {
+		blur true
+		xray false
+	}
+}
+
+layer-rule {
+    match namespace="noctalia-window-switcher"
+
+    background-effect {
+        blur true
+        xray false
+    }
+}
+
+output "DP-1" {
+    mode "1920x1080@165.003"
+    position x=0 y=0
+}
+
+output "HDMI-A-1" {
+    mode "1920x1080@120.000"
+    position x=1920 y=0
+}

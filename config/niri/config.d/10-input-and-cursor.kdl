@@ -1,0 +1,45 @@
+// ─────────────────────────────────────────────────────────────────────────────
+// 10 — Input devices, gestures & cursor
+// ─────────────────────────────────────────────────────────────────────────────
+// Docs: https://niri-wm.github.io/niri/Configuration:-Input
+//
+// Omitting a setting leaves it at the libinput / Niri default.
+// All values here are applied live — no restart needed.
+// ─────────────────────────────────────────────────────────────────────────────
+
+input {
+    keyboard {
+        xkb {
+            layout "pl"
+        }
+        repeat-delay 250
+        repeat-rate 50
+    }
+
+    touchpad {
+        tap
+        tap-button-map "left-right-middle"
+    }
+
+    mouse {
+        accel-profile "flat"
+    }
+    
+    mod-key "Super"
+    mod-key-nested "Alt"
+    }
+
+// ── Gestures ────────────────────────────────────────────────────────────────
+// Hot corners: move cursor to the top-left corner to open Niri's overview.
+// iNiR has its own overview (Mod+Space), so you may want to disable this.
+gestures {
+    hot-corners {
+        // off
+    }
+}
+
+// ── Cursor theme ────────────────────────────────────────────────────────────
+cursor {
+    xcursor-theme "Moga-Black"
+    xcursor-size 40
+}
