@@ -33,9 +33,7 @@
     appimage-run
     lutris
     comma
-    onlyoffice-desktopeditors
-
-    # migrated from nix profile
+    onlyoffice-desktopeditor
     adw-gtk3
     capitaine-cursors
     cargo
