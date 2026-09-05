@@ -34,5 +34,37 @@
     lutris
     comma
     onlyoffice-desktopeditors
+
+    # migrated from nix profile
+    adw-gtk3
+    capitaine-cursors
+    cargo
+    cava
+    cmake
+    gamemode
+    gamescope
+    gcc
+    gh
+    gnumake
+    gtk4
+    lame
+    libva
+    macchina
+    mangohud
+    nwg-look
+    openal
+    pavucontrol
+    pkg-config
+    portaudio
+    protontricks
+    qpwgraph
+    spicetify-cli
+    wineWow64Packages.stagingFull
+    tree
+    umu-launcher
+    unzip
+    vulkan-tools
+    webkitgtk_4_1
+    winetricks
   ];
 }
