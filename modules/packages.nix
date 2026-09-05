@@ -33,7 +33,7 @@
     appimage-run
     lutris
     comma
-    onlyoffice-desktopeditor
+    onlyoffice-desktopeditors
     adw-gtk3
     capitaine-cursors
     cargo
@@ -64,5 +64,7 @@
     vulkan-tools
     webkitgtk_4_1
     winetricks
+    eza
+    bat
   ];
 }
