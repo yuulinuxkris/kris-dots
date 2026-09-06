@@ -1,5 +1,8 @@
 { pkgs, ... }:
 
+let
+  npins = import ./npins.nix { inherit pkgs; };
+in
 {
   environment.systemPackages = with pkgs; [
     firefox
@@ -29,9 +32,7 @@
     blueman
     ani-cli
     unrar
-    protonup-qt
-    appimage-run
-    lutris
+    unzip
     comma
     onlyoffice-desktopeditors
     adw-gtk3
@@ -40,7 +41,6 @@
     cava
     cmake
     gamemode
-    gamescope
     gcc
     gh
     gnumake
@@ -48,23 +48,27 @@
     lame
     libva
     macchina
-    mangohud
     nwg-look
     openal
     pavucontrol
     pkg-config
     portaudio
-    protontricks
     qpwgraph
     spicetify-cli
-    wineWow64Packages.stagingFull
     tree
-    umu-launcher
     unzip
     vulkan-tools
     webkitgtk_4_1
-    winetricks
     eza
     bat
-  ];
+  ] ++ (with npins; [
+    wineWow64Packages.stagingFull
+    gamescope
+    mangohud
+    protontricks
+    umu-launcher
+    winetricks
+    lutris
+    protonup-qt
+  ]);
 }
