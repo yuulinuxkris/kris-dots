@@ -15,6 +15,7 @@
 window-rule {
 	match app-id="steam"
 	match app-id="discord"
+	match app-id="vesktop"
 	match app-id="spotify"
 	match app-id="code"
 	match app-id="firefox"
@@ -101,8 +102,8 @@ layer-rule {
     }
 }
 
-output "DP-1" {
-    mode "1920x1080@165.003"
+output "DP-3" {
+    mode "1920x1080@119.982"
     position x=0 y=0
 }
 

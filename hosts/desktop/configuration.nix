@@ -2,13 +2,14 @@
 
 {
   imports =
-    [ # Include the hardware scan and separate user modules
-      ./hardware-configuration.nix
+    [
+      ./hardware-conf.nix
       ../../modules/packages.nix
-      ../../modules/nvidia.nix
+      ../../modules/amdgpu.nix
       ../../modules/programs.nix
       ../../modules/services.nix
-      ../../modules/virtualization.nix
+      ../../modules/virt.nix
+      ../../modules/qt.nix
     ];
 
   # Bootloader.

@@ -30,7 +30,6 @@ in
     polkit_gnome
     mediawriter
     blueman
-    ani-cli
     unrar
     unzip
     comma
@@ -61,6 +60,12 @@ in
     webkitgtk_4_1
     eza
     bat
+    mpv
+    yt-dlp
+    ffmpeg
+    fzf
+    patch
+    audacity
   ] ++ (with npins; [
     wineWow64Packages.stagingFull
     gamescope
@@ -70,5 +75,6 @@ in
     winetricks
     lutris
     protonup-qt
+    steamcmd
   ]);
 }

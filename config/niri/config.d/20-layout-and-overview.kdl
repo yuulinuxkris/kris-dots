@@ -28,14 +28,13 @@ layout {
     // With prefer-no-csd, it draws *around* the window geometry.
     focus-ring {
         off
-        width 1
+        width 5
         active-color   "#808080"
         inactive-color "#505050"
     }
 
     // ── Border ──────────────────────────────────────────────────────────────
     // Always-visible border (unlike focus-ring which only shows on the active window).
-    // iNiR disables both ring and border by default; the shell draws its own highlights.
     border {
         off
         width 4
