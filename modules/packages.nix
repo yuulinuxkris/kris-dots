@@ -22,10 +22,12 @@ in
     pnpm
     flatpak
     prismlauncher
+    chromium
     adwaita-qt
     adwaita-qt6
     ethtool
     gparted
+    appimage-run
     pinta
     polkit_gnome
     mediawriter
@@ -66,6 +68,7 @@ in
     fzf
     patch
     audacity
+    swaybg
   ] ++ (with npins; [
     wineWow64Packages.stagingFull
     gamescope

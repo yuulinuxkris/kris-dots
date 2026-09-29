@@ -70,6 +70,9 @@ auto_locate = true
 enabled = false
 schema_version = 2
 widget_order = [
+    "lockscreen-login-box@HDMI-2",
+    "lockscreen-login-box@HDMI-A-4",
+    "lockscreen-login-box@HDMI-A-2",
     "lockscreen-login-box@DP-3",
     "lockscreen-login-box@HDMI-A-3",
     "lockscreen-login-box@HDMI-A-1",
@@ -164,6 +167,33 @@ widget_order = [
         show_unlock_hint = true
         show_weather = true
 
+    [lockscreen_widgets.widget."lockscreen-login-box@HDMI-2"]
+    box_height = 196.0
+    box_width = 810.0
+    cx = 960.0
+    cy = 898.0
+    output = "HDMI-2"
+    placement_height = 1080.0
+    placement_width = 1920.0
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@HDMI-2".settings]
+        background_color = "surface_variant"
+        background_opacity = 0.88
+        background_radius = 12.0
+        center_password_text = false
+        input_opacity = 1.0
+        input_radius = 6.0
+        layout = "regular"
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_media = true
+        show_session_buttons = true
+        show_unlock_hint = true
+        show_weather = true
+
     [lockscreen_widgets.widget."lockscreen-login-box@HDMI-A-1"]
     box_height = 196.0
     box_width = 736.0
@@ -176,6 +206,33 @@ widget_order = [
     type = "login_box"
 
         [lockscreen_widgets.widget."lockscreen-login-box@HDMI-A-1".settings]
+        background_color = "surface_variant"
+        background_opacity = 0.88
+        background_radius = 12.0
+        center_password_text = false
+        input_opacity = 1.0
+        input_radius = 6.0
+        layout = "regular"
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_media = true
+        show_session_buttons = true
+        show_unlock_hint = true
+        show_weather = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@HDMI-A-2"]
+    box_height = 196.0
+    box_width = 810.0
+    cx = 960.0
+    cy = 898.0
+    output = "HDMI-A-2"
+    placement_height = 1080.0
+    placement_width = 1920.0
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@HDMI-A-2".settings]
         background_color = "surface_variant"
         background_opacity = 0.88
         background_radius = 12.0
@@ -218,14 +275,41 @@ widget_order = [
         show_unlock_hint = true
         show_weather = true
 
-    [lockscreen_widgets.widget."lockscreen-login-box@winit"]
+    [lockscreen_widgets.widget."lockscreen-login-box@HDMI-A-4"]
     box_height = 196.0
     box_width = 810.0
+    cx = 960.0
+    cy = 898.0
+    output = "HDMI-A-4"
+    placement_height = 1080.0
+    placement_width = 1920.0
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@HDMI-A-4".settings]
+        background_color = "surface_variant"
+        background_opacity = 0.88
+        background_radius = 12.0
+        center_password_text = false
+        input_opacity = 1.0
+        input_radius = 6.0
+        layout = "regular"
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_media = true
+        show_session_buttons = true
+        show_unlock_hint = true
+        show_weather = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@winit"]
+    box_height = 196.0
+    box_width = 720.0
     cx = 640.0
     cy = 618.0
     output = "winit"
-    placement_height = 0.0
-    placement_width = 0.0
+    placement_height = 991.0
+    placement_width = 922.0
     rotation = 0.0
     type = "login_box"
 
@@ -260,7 +344,22 @@ enable_charging_animation = false
 picker_placement = "attached"
 
 [plugins]
-enabled = [ "imjustdoingmypart/niri-animations", "dotnetrob/cat", "icefish/phone-connect" ]
+enabled = [ "imjustdoingmypart/niri-animations", "dotnetrob/cat", "icefish/phone-connect", "kris/hdmi-wallpaper" ]
+
+    [[plugins.source]]
+    kind = "git"
+    location = "https://github.com/noctalia-dev/official-plugins"
+    name = "official"
+
+    [[plugins.source]]
+    kind = "git"
+    location = "https://github.com/noctalia-dev/community-plugins"
+    name = "community"
+
+    [[plugins.source]]
+    kind = "path"
+    location = "/home/kris/.local/share/noctalia/plugins"
+    name = "kris-local"
 
 [shell]
 app_icon_color = "primary"
@@ -333,7 +432,7 @@ wallpaper_scheme = "faithful"
 per_monitor_directories = true
 
     [wallpaper.default]
-    path = "/home/kris/Pictures/Wallpapers/bloom-hug.jpg"
+    path = "/home/kris/Pictures/Wallpapers/flowers1.png"
 
     [wallpaper.last]
     path = "/home/kris/Pictures/Wallpapers/bloom-walk.jpg"
@@ -341,14 +440,23 @@ per_monitor_directories = true
     [wallpaper.monitor.DP-1]
     directory_dark = ""
 
+    [wallpaper.monitor.DP-3]
+    directory = "~/Pictures/Wallpapers"
+
     [wallpaper.monitor.HDMI-A-1]
-    directory = "/home/kris/Pictures/Wallpapers/2"
+    directory = "~/Pictures/Wallpapers"
     directory_light = ""
 
     [wallpaper.monitors.DP-1]
     path = "/home/kris/Pictures/Wallpapers/bloom-hug.jpg"
 
+    [wallpaper.monitors.DP-3]
+    path = "/home/kris/Pictures/Wallpapers/bloom-hug.jpg"
+
     [wallpaper.monitors.HDMI-A-1]
+    path = "/home/kris/Pictures/Wallpapers/bloom-walk.jpg"
+
+    [wallpaper.monitors.HDMI-A-2]
     path = "/home/kris/Pictures/Wallpapers/bloom-walk.jpg"
 
     [[wallpaper.favorite]]

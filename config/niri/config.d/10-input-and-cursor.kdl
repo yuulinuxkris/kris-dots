@@ -43,3 +43,8 @@ cursor {
     xcursor-theme "Moga-Black"
     xcursor-size 40
 }
+
+environment {
+    XCURSOR_THEME "Moga-Black"
+    XCURSOR_SIZE "40"
+}

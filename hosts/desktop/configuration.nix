@@ -10,6 +10,8 @@
       ../../modules/services.nix
       ../../modules/virt.nix
       ../../modules/qt.nix
+      ../../modules/printer.nix
+      ../../modules/ly.nix
     ];
 
   # Bootloader.
@@ -46,9 +48,6 @@
 
   # Enable the trash (X11) windowing system.
   services.xserver.enable = false;
-
-  # Enable the ly Display Manager
-  services.displayManager.ly.enable = true;
 
   # Enable GNOME because shit breaks without it...
   services.desktopManager.gnome.enable = true;
