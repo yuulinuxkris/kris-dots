@@ -429,10 +429,11 @@ wallpaper_scheme = "faithful"
     builtin_ids = [ "btop", "cava", "gtk3", "gtk4", "kitty", "niri", "qt", "starship" ]
 
 [wallpaper]
+directory = "/home/kris/Pictures/Wallpapers"
 per_monitor_directories = true
 
     [wallpaper.default]
-    path = "/home/kris/Pictures/Wallpapers/flowers1.png"
+    path = "/home/kris/Pictures/Wallpapers/bloom-hug.jpg"
 
     [wallpaper.last]
     path = "/home/kris/Pictures/Wallpapers/bloom-walk.jpg"

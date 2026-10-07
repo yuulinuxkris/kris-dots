@@ -7,6 +7,7 @@ in
   environment.systemPackages = with pkgs; [
     firefox
     git
+    osu-lazer-bin
     neovim
     kitty
     niri
@@ -69,9 +70,9 @@ in
     patch
     audacity
     swaybg
+    gamescope
   ] ++ (with npins; [
     wineWow64Packages.stagingFull
-    gamescope
     mangohud
     protontricks
     umu-launcher

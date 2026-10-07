@@ -21,3 +21,7 @@ if status is-interactive
     end
     alias q 'qs -c ii'
 end
+
+alias UndertaleModTool="/home/kris/.wine_undertalemodtool/UndertaleModTool.sh"
+alias utmt="/home/kris/.wine_undertalemodtool/UndertaleModTool.sh"
+
